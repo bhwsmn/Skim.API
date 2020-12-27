@@ -1,4 +1,6 @@
 using AutoMapper;
+using Skim.API.Entities;
+using Skim.API.Models;
 
 namespace Skim.API.Profiles
 {
@@ -6,8 +8,8 @@ namespace Skim.API.Profiles
     {
         public ShortLinkProfile()
         {
-            CreateMap<Entities.ShortLink, Models.ShortLinkDto>();
-            CreateMap<Models.ShortLinkDto, Entities.ShortLink>();
+            CreateMap<ShortLink, ShortLinkDto>();
+            CreateMap<ShortLinkDto, ShortLink>();
         }
     }
 }

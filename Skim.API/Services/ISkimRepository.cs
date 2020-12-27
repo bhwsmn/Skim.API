@@ -5,9 +5,8 @@ namespace Skim.API.Services
 {
     public interface ISkimRepository
     {
-        Task<ShortLink> GetShortLinkAsync(string shortString);
-        Task<ShortLink> AddShortLinkAsync(ShortLink shortLink);
-        Task<bool> ShortStringExistsAsync(string shortString);
-        bool Save();
+        Task<ShortLink> CreateShortLinkAsync(ShortLink shortLink);
+        Task<ShortLink> GetShortLinkAsync(string slug);
+        Task<bool> SlugExistsAsync(string slug);
     }
 }

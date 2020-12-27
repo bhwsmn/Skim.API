@@ -10,10 +10,10 @@ namespace Skim.API.DbContexts
         
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            // ShortString will be have UNIQUE constraint
+            // Slug must have UNIQUE constraint
             builder.Entity<ShortLink>(entity => 
             {
-                entity.HasIndex(e => e.ShortString).IsUnique();
+                entity.HasIndex(e => e.Slug).IsUnique();
             });
         }
 
