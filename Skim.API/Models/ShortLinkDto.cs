@@ -6,7 +6,7 @@ namespace Skim.API.Models
     public class ShortLinkDto
     {
         [Required]
-        [RegularExpression(@"^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$", 
+        [RegularExpression(@"^((http|ftp|https|www)://)?([\w+?\.\w+])+([a-zA-Z0-9\~\!\@\#\$\%\^\&\*\(\)_\-\=\+\\\/\?\.\:\;\'\,]*)?$", 
             ErrorMessage = "Invalid Long URL")]
         public string LongUrl { get; set; }
         
